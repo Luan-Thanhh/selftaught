@@ -1,0 +1,171 @@
+.card {
+  perspective: 150rem;
+  position: relative;
+  margin: 0 2.4rem;
+  height: 45rem;
+
+  &__slide {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+    box-shadow: rgba($black-color, 0.2) 0.5rem 1rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all linear 0.5s;
+
+    &--front {
+      background-color: $white-color;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-orange {
+        background: linear-gradient(-45deg,
+            $dark-orange-color,
+            $medium-orange-color );
+      }
+
+      &-blue {
+        background: linear-gradient(-45deg,
+            $dark-blue-color,
+            $medium-blue-color );
+      }
+
+      &-green {
+        background: linear-gradient(-45deg,
+            $dark-green-color,
+            $medium-green-color );
+      }
+    }
+  }
+
+  // Front
+  &__picture {
+    position: relative;
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 50%;
+    clip-path: ellipse(80% 70% at 50% 30%);
+
+    &--orange {
+      background-image: linear-gradient(to right,
+          $medium-orange-color,
+          $dark-orange-color ),
+        url("../img/involve1.jpg");
+    }
+
+    &--blue {
+      background-image: linear-gradient(to right,
+          $medium-blue-color,
+          $dark-blue-color ),
+        url("../img/involve2.jpg");
+    }
+
+    &--green {
+      background-image: linear-gradient(to right,
+          $medium-green-color,
+          $dark-green-color ),
+        url("../img/involve3.jpg");
+    }
+  }
+
+  &__heading {
+    @include absCenter;
+    width: 100%;
+
+    h4 {
+      display: inline-block;
+
+      &:not(:first-child) {
+        margin-top: 1.6rem;
+      }
+
+      padding: 1.8rem 3.2rem;
+      color: $white-color;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+      border-radius: 5rem;
+    }
+
+    &--orange h4 {
+      background: linear-gradient(to right,
+          rgba($medium-orange-color, 0.8),
+          rgba($dark-orange-color, 0.8));
+
+      box-shadow: 0.6rem 0.6rem rgba($medium-orange-color, 0.3),
+        0.3rem 0.3rem rgba($medium-orange-color, 0.3),
+        -0.6rem -0.6rem rgba($medium-orange-color, 0.3),
+        -0.3rem -0.3rem rgba($medium-orange-color, 0.3);
+    }
+
+    &--blue h4 {
+      background: linear-gradient(to right,
+          rgba($medium-blue-color, 0.8),
+          rgba($dark-blue-color, 0.8));
+
+      box-shadow: 0.6rem 0.6rem rgba($medium-blue-color, 0.3),
+        0.3rem 0.3rem rgba($medium-blue-color, 0.3),
+        -0.6rem -0.6rem rgba($medium-blue-color, 0.3),
+        -0.3rem -0.3rem rgba($medium-blue-color, 0.3);
+    }
+
+    &--green h4 {
+      background: linear-gradient(to right,
+          rgba($medium-green-color, 0.8),
+          rgba($dark-green-color, 0.8));
+
+      box-shadow: 0.6rem 0.6rem rgba($medium-green-color, 0.3),
+        0.3rem 0.3rem rgba($medium-green-color, 0.3),
+        -0.6rem -0.6rem rgba($medium-green-color, 0.3),
+        -0.3rem -0.3rem rgba($medium-green-color, 0.3);
+    }
+  }
+
+  &__details {
+    padding: 3.2rem;
+    list-style: none;
+
+    li {
+      margin: 0 3.2rem;
+      padding: 1.2rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $grey-dark-color;
+      }
+    }
+  }
+
+  // Back
+  &__price {
+    @include absCenter;
+    padding-bottom: 5.8rem;
+    width: 100%;
+    color: $white-color;
+
+    &-title {
+      font-size: 3.2rem;
+      line-height: 1;
+    }
+
+    &-value {
+      padding: 5.4rem 0;
+      font-size: 6.4rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+  }
+
+  &:hover &__slide--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__slide--back {
+    transform: rotateY(0deg);
+  }
+}

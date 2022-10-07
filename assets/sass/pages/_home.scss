@@ -1,0 +1,25 @@
+.about,
+.courses,
+.testimonials,
+.enroll {
+  // margin-top: -25rem;
+  padding: 7.8rem 0;
+}
+
+.skills {
+  padding: 12.5rem 0;
+  background: linear-gradient(to right bottom,
+      rgba($light-blue-color, 0.8),
+      rgba($dark-blue-color, 0.6)),
+    center/cover no-repeat url("../img/background2.jpg");
+  background-attachment: fixed;
+  clip-path: ellipse(75% 48% at 50% 50%);
+}
+
+.testimonials {
+  position: relative;
+}
+
+.enroll {
+  background: linear-gradient(-45deg, $dark-blue-color, $medium-blue-color);
+}

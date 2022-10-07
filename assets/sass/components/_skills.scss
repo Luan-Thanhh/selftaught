@@ -1,0 +1,26 @@
+.skill-item {
+  margin: 0 1.2rem;
+  padding: 4.2rem 1.8rem;
+  background-color: rgba($grey-light-color, 0.8);
+  border-radius: 5rem;
+  box-shadow: rgba($black-color, 0.2) 0.5rem 1rem 2rem;
+  cursor: pointer;
+  transition: all linear 0.3s;
+
+  &__icon {
+    padding-bottom: 2.4rem;
+    font-size: 5.2rem;
+    background: linear-gradient(-45deg, $dark-blue-color, $light-blue-color);
+    @include textGradient;
+    transition: all linear 0.3s;
+  }
+
+  &:hover {
+    transform: translateY(-2rem) scale(1.05);
+  }
+
+  &:hover &__icon {
+    text-shadow: 0.6rem 0.6rem rgba($medium-blue-color, 0.3),
+      0.3rem 0.3rem rgba($medium-blue-color, 0.3);
+  }
+}

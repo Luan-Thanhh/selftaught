@@ -1,0 +1,18 @@
+.enroll-now {
+  width: 100%;
+  background: linear-gradient(to top right,
+      rgba($black-color, 0.4),
+      rgba($gray-color, 0.4)),
+    center/cover no-repeat url("../img/background3.jpg");
+  background-attachment: fixed;
+  border-radius: 5rem;
+  box-shadow: rgba($black-color, 0.2) 0 1.5rem 4rem;
+  overflow: hidden;
+
+  &__form {
+    width: 55%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: rgba($white-color, 0.8);
+  }
+}

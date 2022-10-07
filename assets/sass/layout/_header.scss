@@ -1,0 +1,47 @@
+.header {
+  background: linear-gradient(
+      to right bottom,
+      rgba($light-blue-color, 0.8),
+      rgba($dark-blue-color, 0.6)
+    ),
+    center / cover no-repeat url("../img/background1.jpg");
+  background-attachment: fixed;
+  height: 95vh;
+  clip-path: ellipse(60% 60% at 50% 33%);
+  position: relative;
+
+  &__logo {
+    padding: 32px 0 0 32px;
+    width: 125px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__intro {
+    @include absCenter;
+    text-align: center;
+    color: $white-color;
+    text-transform: uppercase;
+    line-height: 1;
+
+    &--main {
+      margin-bottom: 24px;
+      font-size: 6.4rem;
+      font-weight: 600;
+      letter-spacing: 15px;
+      animation: moveInLeft 1s ease-out;
+      animation-fill-mode: backwards;
+    }
+
+    &--sub {
+      margin-bottom: 54px;
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 18px;
+      animation: moveInRight 1s ease-out;
+      animation-fill-mode: backwards;
+    }
+  }
+}

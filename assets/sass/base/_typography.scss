@@ -1,0 +1,85 @@
+body {
+  color: $gray-color;
+  background-color: $grey-light-color;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6rem;
+}
+
+.heading-primary {
+  padding: 3.2rem;
+  padding-bottom: 12rem;
+  text-align: center;
+  user-select: none;
+
+  &--main {
+    display: inline-block;
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 5px;
+    cursor: default;
+    text-transform: uppercase;
+    transition: all linear 0.3s;
+    color: transparent;
+
+    &:hover {
+      background-size: 200% auto;
+      transform: translateY(3px) scale(1.1) skewY(3deg);
+      animation: shine 3s linear alternate infinite;
+    }
+  }
+
+  &--default &--main {
+    background: linear-gradient(to right, $medium-blue-color, $dark-blue-color);
+    @include textGradient;
+
+    &:hover {
+      background: linear-gradient(to right,
+          $light-blue-color 20%,
+          $medium-blue-color 40%,
+          $dark-blue-color 60%,
+          $light-blue-color 80%);
+      background-size: 200% auto;
+      text-shadow: 0.6rem 0.6rem rgba($medium-blue-color, 0.3),
+        0.3rem 0.3rem rgba($medium-blue-color, 0.3);
+
+      @include textGradient;
+    }
+  }
+
+  &--white &--main {
+    background: linear-gradient(to right, $white-color, $grey-light-color);
+    @include textGradient;
+
+    &:hover {
+      background: linear-gradient(to right,
+          $white-color 20%,
+          $grey-light-color 40%,
+          $medium-blue-color 60%,
+          $white-color 80%);
+      background-size: 200% auto;
+      text-shadow: 0.6rem 0.6rem rgba($grey-dark-color, 0.3),
+        0.3rem 0.3rem rgba($grey-dark-color, 0.3);
+      @include textGradient;
+    }
+  }
+}
+
+.heading-secondary {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+.text {
+  margin-bottom: 2.4rem;
+  color: $gray-light-color;
+  font-size: 1.5rem;
+  line-height: 1.4;
+
+  &--white {
+    color: $white-color;
+  }
+}

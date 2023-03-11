@@ -1,3 +1,3 @@
 # selftaught
 
-https://luan-thanhh.github.io/selftaught/
+https://luan-thnh.github.io/selftaught/
